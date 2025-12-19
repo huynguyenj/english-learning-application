@@ -5,6 +5,7 @@ const ModeToggle = dynamic(() => import("@/components/features/theme/mode-toggle
 
 import { Menu } from "lucide-react"
 import dynamic from "next/dynamic"
+import { PopoverContent, PopoverTrigger, PopoverWrapper } from "../popover/popup"
 export default function Navbar() {
   return (
     <div className="fixed top-0 z-999 w-full flex justify-between py-5 px-25">
@@ -15,7 +16,16 @@ export default function Navbar() {
       <div className="flex justify-center items-center gap-5">
             <ModeToggle/>
             <div>
-                  <Menu/>
+                  <PopoverWrapper>
+                    <PopoverTrigger>
+                      <Menu/>
+                    </PopoverTrigger>
+                    <PopoverContent >
+                      <div>
+                        Login
+                      </div>
+                    </PopoverContent>
+                  </PopoverWrapper>
             </div>
       </div>
     </div>
