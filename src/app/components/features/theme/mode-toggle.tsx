@@ -18,7 +18,7 @@ export default function ModeToggle() {
       setToggle((prev) => !prev)
     }
     return (
-      <div className="flex justify-end px-15 mt-10">
+      <div className="flex justify-end">
       <div className="relative group">
         <Button className="rounded-full w-10 h-10" onClick={handleToggle}>
           {getIconTheme(theme.value)}

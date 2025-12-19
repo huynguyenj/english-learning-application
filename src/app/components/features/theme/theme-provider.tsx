@@ -5,6 +5,9 @@ const ModeToggle = dynamic(() => import("@/components/features/theme/mode-toggle
 
 export function ThemeProvider({ children }: PropsWithChildren) {
    return (
-      <ModeToggle/>
+      <>
+         <ModeToggle/>
+         { children }
+      </>
    )
 }
